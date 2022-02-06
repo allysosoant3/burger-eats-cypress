@@ -1,0 +1,57 @@
+{
+    "signup": {
+
+        "name": "Allyson Vieira",
+        "cpf": "12345678910",
+        "email": "euflinston@outlook.com",
+        "whatsapp": "21986456586",
+        "adress": {
+            "postalcode": "78125320",
+            "street": "Rua José Luiz Coelho",
+            "number": "20",
+            "details": "casa",
+            "district": "Centro-Sul",
+            "city_state": "Várzea Grande/MT"
+
+    },
+        "delivery_method": "Moto",
+        "cnh": "cnh-digital.jpg"
+
+    },
+    "cpf_inv": {
+        "name": "Sisudo Silver",
+        "cpf": "12345678910asd",
+        "email": "Sisudao@outlook.com",
+        "whatsapp": "21986496582",
+        "adress": {
+            "postalcode": "78125320",
+            "street": "Rua José Luiz Coelho",
+            "number": "15",
+            "details": "casa",
+            "district": "Centro-Sul",
+            "city_state": "Várzea Grande/MT"
+
+    },
+        "delivery_method": "Moto",
+        "cnh": "cnh-digital.jpg"
+    },
+    "email_inv": {
+        "name": "Papai Cris",
+        "cpf": "12345678910",
+        "email": "PapaiCrírso@outlook.com",
+        "whatsapp": "21986496582",
+        "adress": {
+            "postalcode": "78125320",
+            "street": "Rua José Luiz Coelho",
+            "number": "35",
+            "details": "casa",
+            "district": "Centro-Sul",
+            "city_state": "Várzea Grande/MT"
+
+    },
+        "delivery_method": "Moto",
+        "cnh": "cnh-digital.jpg"
+
+    }
+
+}
