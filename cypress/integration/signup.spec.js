@@ -14,7 +14,7 @@ describe('Signup', function() {
 
     it('User should be deliver', function() {
 
-        var deliver = SignupFactory.deliver()
+        var deliver = SignupFactory.SignUpCorrect()
 
         Signup.go()
         Signup.fillForm(deliver)
@@ -27,7 +27,7 @@ describe('Signup', function() {
 
     it('invalid document' , function() {
 
-        var deliver = SignupFactory.deliver()
+        var deliver = SignupFactory.SignUpCorrect()
 
         deliver.cpf = '000000141aa'
 
@@ -40,7 +40,7 @@ describe('Signup', function() {
 
     it('Incorect email', function(){
 
-        var deliver = SignupFactory.deliver()
+        var deliver = SignupFactory.SignUpCorrect()
 
         deliver.email = 'Sisudo.com.br'
 
@@ -50,6 +50,18 @@ describe('Signup', function() {
         Signup.alertMessageShoudBe('Oops! Email com formato inválido.')
 
     })
+
+    it('Incorect CEP', function(){
+
+        var deliver = SignupFactory.SignUpIncorrectCEP()    
+
+        Signup.go()
+        Signup.fillFormIncorrectCEP(deliver)
+        Signup.submit()
+        Signup.alertMessageShoudBeCEP('Informe um CEP válido')
+
+    })
+
 
     context('Required fields', function() {
 

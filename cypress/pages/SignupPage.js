@@ -33,6 +33,23 @@
             cy.get('input[accept^="image"]').attachFile('/Pictures/' + deliver.cnh)
 
         }
+        fillFormIncorrectCEP(deliver) {
+
+            cy.get('input[name="fullName"]').type(deliver.name)
+            cy.get('input[name="cpf"]').type(deliver.cpf)
+            cy.get('input[name="email"]').type(deliver.email)
+            cy.get('input[name="whatsapp"]').type(deliver.whatsapp)
+    
+            cy.get('input[name="postalcode"]').type(deliver.adress.postalcode)
+            cy.get('input[type="button"][value="Buscar CEP"]').click()
+    
+            cy.get('input[name="address-number"]').type(deliver.adress.number)
+            cy.get('input[name="address-details"]').type(deliver.adress.details)
+    
+            cy.contains('.delivery-method li', deliver.delivery_method).click()
+            cy.get('input[accept^="image"]').attachFile('/Pictures/' + deliver.cnh)
+
+        }
 
         submit() {
 
@@ -48,10 +65,14 @@
 
         alertMessageShoudBe(expectmessage) {
 
-        //cy.get('.alert-error').should('have.text', expectmessage)
         cy.contains('.alert-error', expectmessage).should('be.visible')
 
         }
+        alertMessageShoudBeCEP(expectmessage) {
+
+            cy.contains('span[class="alert-error"]', expectmessage).should('be.visible')
+    
+            }
 
     }
 

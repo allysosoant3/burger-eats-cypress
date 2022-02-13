@@ -4,7 +4,7 @@
 
     export default {
 
-        deliver: function() {
+        SignUpCorrect: function() {
 
             var firstName = faker.name.firstName()
             var lastName = faker.name.lastName()
@@ -26,8 +26,28 @@
             delivery_method: 'Moto',
             cnh: 'cnh-digital.jpg'
         }
-
         return data
 
+    },
+    SignUpIncorrectCEP: function() {
+
+        var firstName = faker.name.firstName()
+        var lastName = faker.name.lastName()
+
+        var data =  {
+        name: `${firstName} ${lastName}`,
+        cpf: cpf.generate(),
+        email: faker.internet.email(firstName),
+        whatsapp: '21986456586',
+        adress: {
+            postalcode: '78125320as',
+            number: '11',
+            details: 'casa',
+         
+        },
+        delivery_method: 'Moto',
+        cnh: 'cnh-digital.jpg'
     }
-}    
+    return data
+}
+}  

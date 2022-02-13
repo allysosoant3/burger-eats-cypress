@@ -48,6 +48,20 @@
             "district": "Centro-Sul",
             "city_state": "Várzea Grande/MT"
 
+         },
+        "delivery_method": "Moto",
+        "cnh": "cnh-digital.jpg"
+    },
+
+    "CEP_inv": {
+        "name": "Augusto",
+        "cpf": "12345678910",
+        "email": "PapaiCrírso@outlook.com",
+        "whatsapp": "21986496582",
+        "adress": {
+            "postalcode": "78125320as",
+            "number": "35",
+            "details": "casa"
     },
         "delivery_method": "Moto",
         "cnh": "cnh-digital.jpg"
